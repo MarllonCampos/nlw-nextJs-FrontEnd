@@ -66,8 +66,8 @@
     justify-content: center;
 
     border:0;
-    border-radius:5px;
     outline:0;
+    border-radius:5px;
 
     background:var(--blue);
 
@@ -82,8 +82,36 @@
 }
 
 
-.countDownButton:hover { 
+.countDownButton:not(:disabled):hover { 
 
     background:var(--blue-dark);
 
 }
+
+.countDownButtonActive {
+    background:var(--white);
+    color:var(--title);
+    border:1px solid  var(--title);
+}
+
+
+.countDownButtonActive:not(:disabled):hover  {
+    background:var(--red);
+    color:var(--white);
+    
+
+
+}
+
+
+.countDownButton:disabled {
+    cursor:not-allowed;
+    background:var(--white);
+    color:var(--text);
+    border-radius:5px;
+    border-bottom:0.5rem solid var(--green);
+
+}
+
+
+
